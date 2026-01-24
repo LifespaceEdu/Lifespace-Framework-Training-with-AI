@@ -19,10 +19,10 @@ export default async function handler(req, res) {
       return res.status(400).json({ error: 'Messages array required' });
     }
 
-    const token = process.env.GITHUB_TOKEN2;
+    const token = process.env.GITHUB_TOKEN;
     if (!token) {
-      console.error('GITHUB_TOKEN2 not set');
-      return res.status(500).json({ error: 'Server configuration error. Please set GITHUB_TOKEN2 environment variable.' });
+      console.error('GITHUB_TOKEN not set');
+      return res.status(500).json({ error: 'Server configuration error. Please set GITHUB_TOKEN environment variable.' });
     }
 
     const systemPrompt = {
