@@ -1,4 +1,4 @@
-import { NextResponse } from 'next/server';
+‘use client’;
 
 import { useState, useEffect, useRef } from ‘react’;
 
