@@ -4,7 +4,7 @@ export async function POST(request) {
 try {
 const { messages } = await request.json();
 
-```
+
 if (!messages || !Array.isArray(messages)) {
   return NextResponse.json(
     { error: 'Messages array required' },
@@ -23,7 +23,7 @@ if (!token) {
 const systemPrompt = {
   role: 'system',
   content: `You are an AI assistant with deep knowledge of the Lifespace Education Framework, a comprehensive personalized learning approach developed by Marcus Sigh.
-```
+
 
 CORE PHILOSOPHY:
 Lifespace Education prepares students for uncertain futures by developing adaptable skills over fixed knowledge. Learning happens everywhere—in projects, play, conversation, daily life. Students are their own primary teachers; adults facilitate by providing structure, resources, and guidance. The “lifespace” is the entirety of a student’s lived experience—all environments, activities, and interactions that shape learning.
