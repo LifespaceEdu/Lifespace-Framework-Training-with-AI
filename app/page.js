@@ -1,60 +1,180 @@
-import { NextResponse } from 'next/server';
+'use client';
 
-export async function POST(request) {
-  try {
-    const { messages } = await request.json();
+import { useState, useEffect, useRef } from 'react';
 
-    if (!messages || !Array.isArray(messages)) {
-      return NextResponse.json(
-        { error: 'Messages array required' },
-        { status: 400 }
-      );
+export default function Home() {
+  const [activeSection, setActiveSection] = useState('welcome');
+  const [navOpen, setNavOpen] = useState(false);
+  const [chatOpen, setChatOpen] = useState(false);
+  const [messages, setMessages] = useState([
+    {
+      role: 'assistant',
+      content: "Hi! I'm your Lifespace Education AI assistant. I have deep knowledge of the framework and can help you with specific questions about implementation, daily structure, handling challenges, and more. What would you like to know?"
     }
+  ]);
+  const [inputValue, setInputValue] = useState('');
+  const [isLoading, setIsLoading] = useState(false);
+  const chatMessagesRef = useRef(null);
+  const conversationHistory = useRef([]);
 
-    const token = process.env.GITHUB_TOKEN;
-    if (!token) {
-      return NextResponse.json(
-        { error: 'Server configuration error. GITHUB_TOKEN not set.' },
-        { status: 500 }
-      );
+  useEffect(() => {
+    if (chatMessagesRef.current) {
+      chatMessagesRef.current.scrollTop = chatMessagesRef.current.scrollHeight;
     }
+  }, [messages]);
 
-    const systemPrompt = {
-      role: 'system',
-      content: 'You are a helpful AI assistant for Lifespace Education, a comprehensive homeschooling framework. Keep responses short (2-3 paragraphs max). Do not use markdown formatting. Write in plain conversational prose.'
-    };
+  const navigateToSection = (sectionId) => {
+    setActiveSection(sectionId);
+    setNavOpen(false);
+    window.scrollTo(0, 0);
+  };
 
-    const messagesWithSystem = [systemPrompt, ...messages];
+  const sendMessage = async () => {
+    const message = inputValue.trim();
+    if (!message || isLoading) return;
 
-    const response = await fetch('https://models.inference.ai.azure.com/chat/completions', {
-      method: 'POST',
-      headers: {
-        'Content-Type': 'application/json',
-        'Authorization': `Bearer ${token}`
-      },
-      body: JSON.stringify({
-        model: 'gpt-4o',
-        messages: messagesWithSystem,
-        temperature: 0.7,
-        max_tokens: 1000
-      })
-    });
+    const userMessage = { role: 'user', content: message };
+    setMessages(prev => [...prev, userMessage]);
+    conversationHistory.current.push(userMessage);
+    setInputValue('');
+    setIsLoading(true);
 
-    if (!response.ok) {
-      const errorText = await response.text();
-      return NextResponse.json(
-        { error: 'GitHub API error', details: errorText },
-        { status: response.status }
-      );
+    try {
+      const response = await fetch('/api/chat', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json'
+        },
+        body: JSON.stringify({
+          messages: conversationHistory.current
+        })
+      });
+
+      if (!response.ok) {
+        const errorData = await response.json();
+        throw new Error(errorData.error || `HTTP error! status: ${response.status}`);
+      }
+
+      const data = await response.json();
+
+      if (data.choices && data.choices[0] && data.choices[0].message) {
+        const assistantMessage = data.choices[0].message;
+        conversationHistory.current.push(assistantMessage);
+        setMessages(prev => [...prev, assistantMessage]);
+      } else {
+        throw new Error('Invalid response format from API');
+      }
+    } catch (error) {
+      console.error('Error:', error);
+      setMessages(prev => [...prev, {
+        role: 'assistant',
+        content: 'Sorry, I encountered an error: ' + error.message + '. Please try again.'
+      }]);
+      conversationHistory.current.pop();
+    } finally {
+      setIsLoading(false);
     }
+  };
 
-    const data = await response.json();
-    return NextResponse.json(data);
+  const handleKeyDown = (e) => {
+    if (e.key === 'Enter' && !e.shiftKey) {
+      e.preventDefault();
+      sendMessage();
+    }
+  };
 
-  } catch (error) {
-    return NextResponse.json(
-      { error: 'Failed to call AI model', message: error.message },
-      { status: 500 }
-    );
-  }
+  const ContentSection = ({ id, children }) => (
+    <div className={`content-section ${activeSection === id ? 'active' : ''}`}>
+      {children}
+    </div>
+  );
+
+  return (
+    <>
+      <header>
+        <div className="header-content">
+          <h1>Lifespace Education</h1>
+          <button className="menu-btn" onClick={() => setNavOpen(true)}>Menu</button>
+        </div>
+      </header>
+
+      <div 
+        className={`nav-overlay ${navOpen ? 'show' : ''}`}
+        onClick={() => setNavOpen(false)}
+      />
+      
+      <nav className={`nav-drawer ${navOpen ? 'open' : ''}`}>
+        <div className="nav-header">
+          <h2>Lifespace Guide</h2>
+        </div>
+        
+        <div className="nav-section">
+          <div className="nav-section-title">Getting Started</div>
+          <a className="nav-link" onClick={() => navigateToSection('welcome')}>Welcome</a>
+          <a className="nav-link" onClick={() => navigateToSection('what-is-lifespace')}>What is Lifespace?</a>
+        </div>
+      </nav>
+
+      <main>
+        <ContentSection id="welcome">
+          <div className="welcome-screen">
+            <h2>Lifespace Education</h2>
+            <p>AI Trainer is working! Test the chat below.</p>
+            <button className="quick-start-btn" onClick={() => navigateToSection('what-is-lifespace')}>Learn More</button>
+          </div>
+        </ContentSection>
+        
+        <ContentSection id="what-is-lifespace">
+          <h2>What is Lifespace?</h2>
+          <p>Add your content here.</p>
+        </ContentSection>
+      </main>
+
+      <div className={`chat-container ${chatOpen ? 'open' : ''}`}>
+        <div className="chat-header">
+          <h3>Ask Lifespace AI</h3>
+          <button className="close-chat" onClick={() => setChatOpen(false)}>×</button>
+        </div>
+        <div className="chat-messages" ref={chatMessagesRef}>
+          {messages.map((msg, idx) => (
+            <div key={idx} className={`message ${msg.role}`}>
+              {msg.content}
+            </div>
+          ))}
+        </div>
+        {isLoading && (
+          <div className="typing-indicator show">
+            <div className="typing-dot"></div>
+            <div className="typing-dot"></div>
+            <div className="typing-dot"></div>
+          </div>
+        )}
+        <div className="chat-input-area">
+          <textarea
+            className="chat-input"
+            placeholder="Ask about implementing Lifespace..."
+            rows="3"
+            value={inputValue}
+            onChange={(e) => setInputValue(e.target.value)}
+            onKeyDown={handleKeyDown}
+            disabled={isLoading}
+          />
+          <button 
+            className="send-btn" 
+            onClick={sendMessage}
+            disabled={isLoading}
+          >
+            Send
+          </button>
+        </div>
+      </div>
+
+      <button 
+        className={`chat-toggle ${chatOpen ? 'hidden' : ''}`}
+        onClick={() => setChatOpen(true)}
+      >
+        💬
+      </button>
+    </>
+  );
 }
