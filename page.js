@@ -68,9 +68,27 @@ try {
   return;
 }
 
-if (!response.ok) {
-  throw new Error(data.error || `HTTP error! status: ${response.status}`);
-}
+   const text = await response.text();
+
+      let data;
+      try {
+        data = JSON.parse(text);
+      } catch {
+        console.error('Raw response was not JSON:', text);
+        setMessages(prev => [
+          ...prev,
+          {
+            role: 'assistant',
+            content: 'Upstream error (not JSON): ' + text,
+          },
+        ]);
+        setIsLoading(false);
+        return;
+      }
+
+      if (!response.ok) {
+        throw new Error(data.error || `HTTP error! status: ${response.status}`);
+      }
 
       const data = await response.json();
 
