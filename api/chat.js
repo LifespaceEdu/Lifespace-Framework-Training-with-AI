@@ -15,19 +15,21 @@ return res.status(405).json({ error: ‘Method not allowed’ });
 try {
 const { messages } = req.body;
 
+```
 if (!messages || !Array.isArray(messages)) {
   return res.status(400).json({ error: 'Messages array required' });
 }
 
-const token = process.env.GITHUB_TOKEN;
+const token = process.env.GITHUB_TOKEN2;
 if (!token) {
-  console.error('GITHUB_TOKEN not set');
-  return res.status(500).json({ error: 'Server configuration error. Please set GITHUB_TOKEN environment variable.' });
+  console.error('GITHUB_TOKEN2 not set');
+  return res.status(500).json({ error: 'Server configuration error. Please set GITHUB_TOKEN2 environment variable.' });
 }
 
 const systemPrompt = {
   role: 'system',
   content: `You are a helpful AI assistant for Lifespace Education, a comprehensive homeschooling and alternative education framework developed by Marcus Sigh. You have COMPLETE knowledge of the entire 73-page Lifespace Education Framework.
+```
 
 YOUR COMPLETE KNOWLEDGE BASE - THE FULL LIFESPACE EDUCATION FRAMEWORK:
 
