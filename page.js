@@ -50,10 +50,27 @@ export default function Home() {
         })
       });
 
-      if (!response.ok) {
-        const errorData = await response.json();
-        throw new Error(errorData.error || `HTTP error! status: ${response.status}`);
-      }
+      const text = await response.text();
+
+let data;
+try {
+  data = JSON.parse(text);
+} catch {
+  setMessages(prev => [
+    ...prev,
+    {
+      role: 'assistant',
+      content:
+        'Upstream error (not JSON): ' + text,
+    },
+  ]);
+  setIsLoading(false);
+  return;
+}
+
+if (!response.ok) {
+  throw new Error(data.error || `HTTP error! status: ${response.status}`);
+}
 
       const data = await response.json();
 
