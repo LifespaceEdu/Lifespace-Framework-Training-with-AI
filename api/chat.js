@@ -128,7 +128,7 @@ RESPONSE FORMAT RULES:
 - Be concise and direct`
   };
   
-  const messagesWithSystem = [systemPrompt, ...messages];
+  const messagesWithSystem = [systemPrompt,...messages];
   
   const response = await fetch(‘https://models.github.ai/inference/chat/completions’, {
   method: ‘POST’,
