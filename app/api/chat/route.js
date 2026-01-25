@@ -1,8 +1,25 @@
-import { NextResponse } from 'next/server';
-
 export async function POST(request) {
   try {
-    const { messages } = await request.json();
+    // Read what the browser sent as raw text
+    const bodyText = await request.text();
+
+    if (!bodyText) {
+      return NextResponse.json(
+        { error: 'Request body was empty' },
+        { status: 400 }
+      );
+    }
+
+    let messages;
+    try {
+      const parsed = JSON.parse(bodyText);
+      messages = parsed.messages;
+    } catch (e) {
+      return NextResponse.json(
+        { error: 'Could not parse JSON body', details: bodyText },
+        { status: 400 }
+      );
+    }
 
     if (!messages || !Array.isArray(messages)) {
       return NextResponse.json(
