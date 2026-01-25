@@ -1,22 +1,16 @@
 import { NextResponse } from ‘next/server’;
 
-export async function POST(request) {
+export async function POST(req) {
 try {
-const { messages } = await request.json();
+const { messages } = await req.json();
 
 if (!messages || !Array.isArray(messages)) {
-  return NextResponse.json(
-    { error: 'Messages array required' },
-    { status: 400 }
-  );
+  return NextResponse.json({ error: 'Messages array required' }, { status: 400 });
 }
 
 const token = process.env.GITHUB_TOKEN;
 if (!token) {
-  return NextResponse.json(
-    { error: 'Server configuration error. GITHUB_TOKEN not set.' },
-    { status: 500 }
-  );
+  return NextResponse.json({ error: 'GITHUB_TOKEN not set' }, { status: 500 });
 }
 
 const systemPrompt = {
@@ -30,7 +24,7 @@ const response = await fetch('https://models.inference.ai.azure.com/chat/complet
   method: 'POST',
   headers: {
     'Content-Type': 'application/json',
-    'Authorization': `Bearer ${token}`
+    'Authorization': 'Bearer ' + token
   },
   body: JSON.stringify({
     model: 'gpt-4o',
@@ -42,19 +36,13 @@ const response = await fetch('https://models.inference.ai.azure.com/chat/complet
 
 if (!response.ok) {
   const errorText = await response.text();
-  return NextResponse.json(
-    { error: 'GitHub API error', details: errorText },
-    { status: response.status }
-  );
+  return NextResponse.json({ error: 'API error', details: errorText }, { status: response.status });
 }
 
 const data = await response.json();
 return NextResponse.json(data);
 
 } catch (error) {
-return NextResponse.json(
-{ error: ‘Failed to call AI model’, message: error.message },
-{ status: 500 }
-);
+return NextResponse.json({ error: ‘Failed to call AI’, message: error.message }, { status: 500 });
 }
 }
