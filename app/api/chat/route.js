@@ -4,7 +4,6 @@ export async function POST(request) {
 try {
 const { messages } = await request.json();
 
-```
 if (!messages || !Array.isArray(messages)) {
   return NextResponse.json(
     { error: 'Messages array required' },
@@ -51,7 +50,6 @@ if (!response.ok) {
 
 const data = await response.json();
 return NextResponse.json(data);
-```
 
 } catch (error) {
 return NextResponse.json(
