@@ -1,18 +1,18 @@
-“use client”;
+"use client";
 
-import { useState, useEffect, useRef } from “react”;
+import { useState, useEffect, useRef } from "react";
 
 export default function Home() {
-const [activeSection, setActiveSection] = useState(“welcome”);
+const [activeSection, setActiveSection] = useState("welcome");
 const [navOpen, setNavOpen] = useState(false);
 const [chatOpen, setChatOpen] = useState(false);
 const [messages, setMessages] = useState([
 {
-role: “assistant”,
-content: “Hi! I’m your Lifespace Education AI assistant. I have deep knowledge of the framework and can help you with specific questions about implementation, daily structure, handling challenges, and more. What would you like to know?”
+role: "assistant",
+content: "Hi! I’m your Lifespace Education AI assistant. I have deep knowledge of the framework and can help you with specific questions about implementation, daily structure, handling challenges, and more. What would you like to know?"
 }
 ]);
-const [inputValue, setInputValue] = useState(””);
+const [inputValue, setInputValue] = useState("");
 const [isLoading, setIsLoading] = useState(false);
 const chatMessagesRef = useRef(null);
 const conversationHistory = useRef([]);
@@ -26,7 +26,7 @@ chatMessagesRef.current.scrollTop = chatMessagesRef.current.scrollHeight;
 const navigateToSection = (sectionId) => {
 setActiveSection(sectionId);
 setNavOpen(false);
-if (typeof window !== “undefined”) {
+if (typeof window !== "undefined") {
 window.scrollTo(0, 0);
 }
 };
@@ -74,22 +74,22 @@ try {
 };
 
 const sections = [
-“welcome”,
-“what-is-lifespace”,
-“how-learning-works”,
-“three-paths”,
-“learning-maps”,
-“daily-structure”,
-“core-skills”,
-“project-work”,
-“free-play”,
-“relationships”,
-“starting”,
-“troubleshooting”,
-“six-pillars”,
-“principles”,
-“assessment”,
-“differentiation”
+"welcome",
+"what-is-lifespace",
+"how-learning-works",
+"three-paths",
+"learning-maps",
+"daily-structure",
+"core-skills",
+"project-work",
+"free-play",
+"relationships",
+"starting",
+"troubleshooting",
+"six-pillars",
+"principles",
+"assessment",
+"differentiation"
 ];
 
 const getNextSection = (currentSection) => {
@@ -109,22 +109,22 @@ return null;
 };
 
 const sectionTitles = {
-“welcome”: “Welcome”,
-“what-is-lifespace”: “What is Lifespace?”,
-“how-learning-works”: “How Learning Works”,
-“three-paths”: “Three Paths”,
-“learning-maps”: “Learning Maps”,
-“daily-structure”: “Daily Structure”,
-“core-skills”: “Core Skills”,
-“project-work”: “Project Work”,
-“free-play”: “Free Play”,
-“relationships”: “Relationships”,
-“starting”: “Getting Started”,
-“troubleshooting”: “Troubleshooting”,
-“six-pillars”: “Six Pillars”,
-“principles”: “Principles & Methods”,
-“assessment”: “Assessment”,
-“differentiation”: “Differentiation”
+"welcome": "Welcome",
+"what-is-lifespace": "What is Lifespace?",
+"how-learning-works": "How Learning Works",
+"three-paths": "Three Paths",
+"learning-maps": "Learning Maps",
+"daily-structure": "Daily Structure",
+"core-skills": "Core Skills",
+"project-work": "Project Work",
+"free-play": "Free Play",
+"relationships": "Relationships",
+"starting": "Getting Started",
+"troubleshooting": "Troubleshooting",
+"six-pillars": "Six Pillars",
+"principles": "Principles & Methods",
+"assessment": "Assessment",
+"differentiation": "Differentiation"
 };
 
 return (
