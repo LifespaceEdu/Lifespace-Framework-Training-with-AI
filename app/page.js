@@ -1,6 +1,6 @@
-‘use client’;
+'use client';
 
-import { useState, useEffect, useRef } from ‘react’;
+import { useState, useEffect, useRef } from 'react';
 
 export default function Home() {
 const [activeSection, setActiveSection] = useState(‘welcome’);
