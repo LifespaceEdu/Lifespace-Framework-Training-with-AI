@@ -502,13 +502,7 @@ export default function Home() {
         {/* Welcome Section */}
         <div className={`content-section ${activeSection === "welcome" ? "active" : ""}`}>
             <h2>Lifespace Education</h2>
-            <p>What is Lifespace Education?
-
-Lifespace Education is a way of organizing your child's whole day so that real learning happens in the middle of real life, instead of trying to recreate school at home. It treats your child's "lifespace"—all the places, people, activities, and moments they move through—as the actual classroom, and focuses on giving them strong tools (reading, writing, math, thinking, relationships) they can use anywhere.
-
-Instead of six hours of seatwork, Lifespace uses short, focused practice for core skills and then lets those skills show up in projects, play, and everyday family life.
-
-Right now, as you read this, your child is learning. They're learning how objects balance, how shadows move, which words get adults to respond, how their body feels when they're bored versus engaged. The question isn't "how do I make my child learn?" Your child cannot stop learning. The real question is: "What are they learning, and is it what they need?".</p>
+            <p>Welcome to the Lifespace Education Training Tool!</p>
             
             <div className="quick-start">
               <button className="quick-start-btn" onClick={() => navigateToSection("what-is-lifespace")}>What is Lifespace?</button>
