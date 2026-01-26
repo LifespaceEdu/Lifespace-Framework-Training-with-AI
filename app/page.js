@@ -1424,7 +1424,7 @@ export default function Home() {
               Differentiation in Lifespace means adjusting the level of
               structure, support, and challenge so each student can participate
               meaningfully in the same overall framework.
-            </p>
+            </p> 
 
             <h3>Levers You Can Adjust</h3>
             <ul>
