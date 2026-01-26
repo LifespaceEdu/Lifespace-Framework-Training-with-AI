@@ -19,7 +19,7 @@ body {
 
   /* Solid black background */
   background: #000000;
-  color: #e5e7eb;
+  color: #ffffff;
 }
 
 /* Root container (wrap your page markup in a div.app-root) */
@@ -53,7 +53,7 @@ body {
   font-size: 18px;
   font-weight: 600;
   letter-spacing: 0.02em;
-  color: #e5e7eb;
+  color: #ffffff;
 }
 
 .sidebar-subtitle {
@@ -112,7 +112,7 @@ body {
 .sidebar-section-title {
   font-size: 14px;
   font-weight: 500;
-  color: #e5e7eb;
+  color: #ffffff;
 }
 
 .sidebar-section-desc {
@@ -170,7 +170,7 @@ body {
   font-weight: 600;
   margin-bottom: 12px;
   letter-spacing: 0.01em;
-  color: #f9fafb;
+  color: #ffffff;
 }
 
 .content-section h3 {
@@ -178,13 +178,13 @@ body {
   font-weight: 500;
   margin-top: 20px;
   margin-bottom: 8px;
-  color: #e5e7eb;
+  color: #ffffff;
 }
 
 .content-section p {
   font-size: 14px;
   line-height: 1.55;
-  color: #d1d5db;
+  color: #ffffff;
   margin-bottom: 10px;
 }
 
@@ -195,7 +195,7 @@ body {
 .content-section li {
   font-size: 14px;
   line-height: 1.5;
-  color: #d1d5db;
+  color: #ffffff;
   margin-bottom: 6px;
 }
 
