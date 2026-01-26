@@ -877,7 +877,7 @@ export default function Home() {
           padding: 0;
           box-sizing: border-box;
         }
-      '}</style>
+      `}</style>
     
         body {
           font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
