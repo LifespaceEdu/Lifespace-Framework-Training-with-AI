@@ -1,4 +1,4 @@
-=“use client”;
+“use client”;
 
 import { useState, useEffect, useRef } from “react”;
 
@@ -704,7 +704,7 @@ box-sizing: border-box;
       {/* WHAT IS LIFESPACE */}
       <div className={`content-section ${activeSection === "what-is-lifespace" ? "active" : ""}`}>
         <h2>What is Lifespace Education?</h2>
-        <p>Lifespace Education is a way of organizing your child's whole day so that real learning happens in the middle of real life, instead of trying to recreate school at home. It treats your child's lifespace—all the places, people, activities, and moments they move through—as the actual classroom, and focuses on giving them strong tools (reading, writing, math, thinking, relationships) they can use anywhere.</p>
+        <p>Lifespace Education is a way of organizing your child's whole day so that real learning happens in the middle of real life, instead of trying to recreate school at home. It treats your child's lifespace-all the places, people, activities, and moments they move through-as the actual classroom, and focuses on giving them strong tools (reading, writing, math, thinking, relationships) they can use anywhere.</p>
         
         <p>Instead of six hours of seat work, Lifespace uses short, focused practice for core skills and then lets those skills show up in projects, play, and everyday family life.</p>
         
@@ -723,11 +723,11 @@ box-sizing: border-box;
       {/* HOW LEARNING WORKS */}
       <div className={`content-section ${activeSection === "how-learning-works" ? "active" : ""}`}>
         <h2>How Learning Actually Works</h2>
-        <p>Traditional schooling has convinced us that learning happens in specific places (classrooms), at specific times (7 AM–3 PM), in specific ways (sitting still, following instructions, completing worksheets). This is a profound misunderstanding that separates children from the actual process of learning and from life itself.</p>
+        <p>Traditional schooling has convinced us that learning happens in specific places (classrooms), at specific times (7 AM-3 PM), in specific ways (sitting still, following instructions, completing worksheets). This is a profound misunderstanding that separates children from the actual process of learning and from life itself.</p>
         
         <p>Learning is happening constantly. In play. In conversation. In observation. In experimentation. In boredom. In frustration. In success. In failure.</p>
         
-        <p>The Lifespace Education approach doesn't create learning—learning is already happening. Lifespace is about being intentional about what children learn and giving them the tools they need to learn anything they choose for the rest of their lives.</p>
+        <p>The Lifespace Education approach doesn't create learning-learning is already happening. Lifespace is about being intentional about what children learn and giving them the tools they need to learn anything they choose for the rest of their lives.</p>
 
         <h3>The Shift You Need to Make</h3>
         <p>Stop thinking: "How do I fit 6 hours of school into my home?"</p>
@@ -771,11 +771,11 @@ box-sizing: border-box;
         <h2>Three Ways to Use This Approach</h2>
         
         <h3>Path 1: Full Homeschool (You're the Primary Teacher)</h3>
-        <p><strong>What this looks like:</strong> You design daily structure, teach core skills or hire tutors, facilitate project work. Active teaching/facilitating: 2–4 hours daily in short blocks.</p>
+        <p><strong>What this looks like:</strong> You design daily structure, teach core skills or hire tutors, facilitate project work. Active teaching/facilitating: 2-4 hours daily in short blocks.</p>
         <p><strong>Who this works for:</strong> Parents who work from home with flexibility, stay-at-home parents, parents whose children respond well to them as teachers.</p>
 
         <h3>Path 2: Microschool (Hire a Lifespace-Trained Teacher)</h3>
-        <p><strong>What this looks like:</strong> 3–5 families pool resources and hire a teacher trained in Lifespace approach. Meets 3–5 days per week, 4–6 hours per day.</p>
+        <p><strong>What this looks like:</strong> 3-5 families pool resources and hire a teacher trained in Lifespace approach. Meets 3-5 days per week, 4-6 hours per day.</p>
         <p><strong>Who this works for:</strong> Parents who work full-time outside the home, parents who want community but can't do it alone, families who want expertise but not traditional school.</p>
 
         <h3>Path 3: Supplementing Traditional School</h3>
@@ -834,7 +834,7 @@ box-sizing: border-box;
 
         <h3>Screen Time & Brain Break Rules</h3>
         <ul>
-          <li>Maximum block length: 15–25 minutes</li>
+          <li>Maximum block length: 15-25 minutes</li>
           <li>No back-to-back screen time (every screen block MUST be followed by a brain break)</li>
           <li>Brain break = feet touch earth, sun goes in eyes, analog art project, or physical activity</li>
         </ul>
@@ -882,7 +882,7 @@ box-sizing: border-box;
         <p>One of the most persistent myths of traditional schooling is that all children learn best on the same schedule. This is absurd. Your child's optimal daily structure is NOT the same as another child's.</p>
 
         <h3>Finding Your Child's Natural Rhythms</h3>
-        <p>Spend 2–4 weeks tracking your child's natural energy and focus patterns:</p>
+        <p>Spend 2-4 weeks tracking your child's natural energy and focus patterns:</p>
         <ul>
           <li>When is your child most alert and focused?</li>
           <li>When does focus decline?</li>
@@ -901,7 +901,7 @@ box-sizing: border-box;
 
         <h3>Pattern 3: Distributed Throughout Day</h3>
         <p><strong>Who this fits:</strong> Children with consistent energy, children who need variety and movement, younger children with shorter attention spans.</p>
-        <p><strong>Why this works:</strong> Never asks for sustained focus (matches shorter attention span); constant movement prevents restlessness; parent can work in 30–45 minute chunks throughout day.</p>
+        <p><strong>Why this works:</strong> Never asks for sustained focus (matches shorter attention span); constant movement prevents restlessness; parent can work in 30-45 minute chunks throughout day.</p>
 
         <h3>Your Structure Is Valid</h3>
         <p>Whatever structure emerges from YOUR child's data and YOUR family's needs is the right structure. The structure that works is the one that:</p>
@@ -926,7 +926,7 @@ box-sizing: border-box;
       {/* CORE SKILLS */}
       <div className={`content-section ${activeSection === "core-skills" ? "active" : ""}`}>
         <h2>Core Skills in Short, Focused Blocks</h2>
-        <p>Core competencies—reading, writing, math, and science—receive focused attention daily while remaining integrated with project work and real-world application. The Lifespace approach dedicates approximately two hours per day to explicit skill instruction and practice, building strong foundations efficiently without consuming the entire learning day.</p>
+        <p>Core competencies-reading, writing, math, and science-receive focused attention daily while remaining integrated with project work and real-world application. The Lifespace approach dedicates approximately two hours per day to explicit skill instruction and practice, building strong foundations efficiently without consuming the entire learning day.</p>
 
         <h3>Reading (30-40 minutes daily)</h3>
         <h4>Reading Skills Practice (15-20 minutes, 3-5 times weekly):</h4>
@@ -1000,7 +1000,7 @@ box-sizing: border-box;
         </ul>
 
         <h3>Example: Traditional vs. Project Approach</h3>
-        <p><strong>Traditional:</strong> "Read Chapter 4 on ecosystems. Answer questions 1–10. Take quiz Friday."</p>
+        <p><strong>Traditional:</strong> "Read Chapter 4 on ecosystems. Answer questions 1-10. Take quiz Friday."</p>
         <p><strong>Project:</strong> "Choose a local ecosystem. Observe it over 2 weeks. Create a field guide identifying 10 species and explaining how they interact. Present findings to the community center."</p>
         <p>Which approach teaches more? Which will the student remember in 5 years?</p>
 
@@ -1041,7 +1041,7 @@ box-sizing: border-box;
       {/* FREE PLAY */}
       <div className={`content-section ${activeSection === "free-play" ? "active" : ""}`}>
         <h2>Free Play & Exploration: Non-Negotiable Learning Time</h2>
-        <p>Play is not supplemental to learning—it is essential for development, wellbeing, and cognitive growth.</p>
+        <p>Play is not supplemental to learning-it is essential for development, wellbeing, and cognitive growth.</p>
 
         <h3>The Importance of Free Play</h3>
         <p>Research documents a dramatic decline in children's opportunities for free play. This decline correlates with increased anxiety, depression, and decreased sense of control among children and adolescents.</p>
@@ -1052,11 +1052,11 @@ box-sizing: border-box;
           <li><strong>Emotional Self-Regulation:</strong> Play provides safe contexts for experiencing and managing emotions</li>
           <li><strong>Social Skills:</strong> Self-organized play requires negotiation, compromise, conflict resolution</li>
           <li><strong>Creativity and Problem-Solving:</strong> Unstructured time allows exploration, experimentation, imagination</li>
-          <li><strong>Intrinsic Motivation:</strong> Play is inherently motivated—children do it because they want to</li>
+          <li><strong>Intrinsic Motivation:</strong> Play is inherently motivated-children do it because they want to</li>
         </ul>
 
         <h3>Free Play in Lifespace</h3>
-        <p>Lifespace dedicates 1–2 hours daily to free play and exploration. This is not recess as reward for completing work but essential time protected in the daily structure.</p>
+        <p>Lifespace dedicates 1-2 hours daily to free play and exploration. This is not recess as reward for completing work but essential time protected in the daily structure.</p>
         
         <p>Students choose how to spend this time: outdoor exploration and physical play, building projects, creative arts, reading for pleasure, playing games, tinkering with materials, or simply relaxing.</p>
         
@@ -1065,12 +1065,12 @@ box-sizing: border-box;
         <h3>Brain Breaks Throughout the Day</h3>
         <p>Beyond dedicated free play time, Lifespace requires brain breaks throughout the learning day. Any screen-based activity must be followed by a brain break before returning to screens.</p>
         
-        <p>These breaks aren't wasted time—they're essential for processing learning, maintaining focus, regulating energy, and preventing cognitive fatigue.</p>
+        <p>These breaks aren't wasted time-they're essential for processing learning, maintaining focus, regulating energy, and preventing cognitive fatigue.</p>
 
         <h3>Play as Brain Development</h3>
         <p>Neuroscience research demonstrates that play literally builds brain architecture. The kind of self-directed exploration that happens in play strengthens executive function, emotional regulation, and social cognition in ways that direct instruction cannot replicate.</p>
         
-        <p>Play is not what students do when learning is finished—play is how fundamental learning happens.</p>
+        <p>Play is not what students do when learning is finished-play is how fundamental learning happens.</p>
 
         <div className="section-navigation">
           <button className="nav-button" onClick={() => navigateToSection(getPrevSection("free-play"))}>
@@ -1102,14 +1102,14 @@ box-sizing: border-box;
         
         <p>Learning communities are built on:</p>
         <ul>
-          <li><strong>Mutual Respect:</strong> Adults treat students with genuine respect—listening to their perspectives, honoring their feelings, taking their ideas seriously</li>
+          <li><strong>Mutual Respect:</strong> Adults treat students with genuine respect-listening to their perspectives, honoring their feelings, taking their ideas seriously</li>
           <li><strong>Trust:</strong> Adults trust that students want to learn and grow. Students learn they can trust adults to support rather than punish them</li>
           <li><strong>Authentic Care:</strong> Adults genuinely care about students as whole people. Students feel seen, valued, and supported</li>
           <li><strong>Collaborative Agreements:</strong> Rather than imposing rules, learning communities co-create agreements about how to work together</li>
         </ul>
 
         <h3>Restorative Practices</h3>
-        <p>When conflicts arise or agreements are broken—and they will be—Lifespace uses restorative practices rather than punishment.</p>
+        <p>When conflicts arise or agreements are broken-and they will be-Lifespace uses restorative practices rather than punishment.</p>
         
         <h4>The Restorative Circle:</h4>
         <p>When disruptions occur, the community comes together to understand what happened, how people were affected, what needs to be repaired, and how to move forward. The goal is not punishment but accountability, empathy development, relationship repair, and learning better ways of handling challenging situations.</p>
@@ -1129,7 +1129,7 @@ box-sizing: border-box;
           <li>Build intrinsic motivation and self-regulation</li>
         </ul>
         
-        <p>Conversely, when students feel controlled, judged, or threatened, their stress responses activate, making complex learning neurologically more difficult. Relationship-based approaches aren't just nice—they're essential for the kind of higher-order thinking Lifespace develops.</p>
+        <p>Conversely, when students feel controlled, judged, or threatened, their stress responses activate, making complex learning neurologically more difficult. Relationship-based approaches aren't just nice-they're essential for the kind of higher-order thinking Lifespace develops.</p>
 
         <div className="section-navigation">
           <button className="nav-button" onClick={() => navigateToSection(getPrevSection("relationships"))}>
@@ -1173,10 +1173,10 @@ box-sizing: border-box;
 
         <h3>The Minimum Viable Week</h3>
         <p>If you're overwhelmed and don't know where to start:</p>
-        <p><strong>Monday–Friday:</strong> One 15–20 minute focused core-skill block (reading or math) + at least 30 minutes of free play or project time + normal family life</p>
+        <p><strong>Monday-Friday:</strong> One 15-20 minute focused core-skill block (reading or math) + at least 30 minutes of free play or project time + normal family life</p>
         <p><strong>Weekend:</strong> One small project (building something, investigating something, making something) + protected free play time</p>
         <p>That's it. If you do that consistently, you're doing Lifespace.</p>
-        <p>Everything else—more refined Learning Maps, multiple subjects, elaborate projects—can build from there.</p>
+        <p>Everything else-more refined Learning Maps, multiple subjects, elaborate projects-can build from there.</p>
 
         <div className="section-navigation">
           <button className="nav-button" onClick={() => navigateToSection(getPrevSection("starting"))}>
@@ -1258,7 +1258,7 @@ box-sizing: border-box;
         <p>Lifespace Education develops students across six essential pillars that work together to create capable, confident learners.</p>
 
         <h3>Pillar 1: Critical Thinking</h3>
-        <p>Critical thinking encompasses analysis, synthesis, inference, and evaluation—the skills that enable students to navigate complexity, question assumptions, and form well-reasoned perspectives. In an era of unprecedented information access and misinformation, critical thinking is essential for survival in modern society.</p>
+        <p>Critical thinking encompasses analysis, synthesis, inference, and evaluation-the skills that enable students to navigate complexity, question assumptions, and form well-reasoned perspectives. In an era of unprecedented information access and misinformation, critical thinking is essential for survival in modern society.</p>
         <p>Information literacy sits at the heart of critical thinking. Students explicitly learn to evaluate source credibility, identify bias, distinguish fact from opinion, navigate digital information landscapes safely, and use information responsibly.</p>
 
         <h3>Pillar 2: Problem Solving</h3>
@@ -1271,7 +1271,7 @@ box-sizing: border-box;
 
         <h3>Pillar 4: Expression</h3>
         <p>Expression is the ability to take a powerful idea from your mind and make it real for others to perceive. It encompasses synthesis (bringing complex concepts together into coherent vision) and transmission (communicating that vision clearly).</p>
-        <p>Expression is measured by the clarity and quality of the idea itself, and the effectiveness of its transmission to others. The modality doesn't matter—written, spoken, visual, performed, built, coded, or any other form. What matters is whether the idea successfully moved from one person's understanding into another's.</p>
+        <p>Expression is measured by the clarity and quality of the idea itself, and the effectiveness of its transmission to others. The modality doesn't matter-written, spoken, visual, performed, built, coded, or any other form. What matters is whether the idea successfully moved from one person's understanding into another's.</p>
 
         <h3>Pillar 5: Social-Emotional Learning (SEL)</h3>
         <p>SEL is the foundation upon which all other learning rests. It encompasses the processes through which students develop and apply knowledge, attitudes, and skills necessary to understand and manage emotions, set and achieve positive goals, feel and show empathy, establish and maintain healthy relationships, and make responsible decisions.</p>
@@ -1294,21 +1294,21 @@ box-sizing: border-box;
       {/* PRINCIPLES */}
       <div className={`content-section ${activeSection === "principles" ? "active" : ""}`}>
         <h2>Principles & Methods</h2>
-        <p>The six pillars describe what students develop through Lifespace Education. The principles and methods describe how learning happens—the distinctive approaches that characterize Lifespace.</p>
+        <p>The six pillars describe what students develop through Lifespace Education. The principles and methods describe how learning happens-the distinctive approaches that characterize Lifespace.</p>
 
         <h3>Student Agency</h3>
-        <p>Student agency—the capacity to make meaningful decisions about one's own learning—sits at the heart of Lifespace Education. Students are not passive recipients of predetermined curriculum but active agents who shape their learning journeys through choice in project topics, decisions about daily schedules, selection of learning resources, and determination of how to demonstrate understanding.</p>
+        <p>Student agency-the capacity to make meaningful decisions about one's own learning-sits at the heart of Lifespace Education. Students are not passive recipients of predetermined curriculum but active agents who shape their learning journeys through choice in project topics, decisions about daily schedules, selection of learning resources, and determination of how to demonstrate understanding.</p>
         <p>Agency is not the same as complete autonomy. Adults provide structure, guidance, resources, and expertise while students make genuine decisions within that supportive framework.</p>
 
         <h3>Real-World Relevance</h3>
-        <p>Learning in Lifespace Education connects to authentic contexts, real problems, and genuine communities. Students don't learn content in isolation to possibly apply it someday—they engage with actual questions, address real challenges, and interact with people beyond their immediate learning community.</p>
+        <p>Learning in Lifespace Education connects to authentic contexts, real problems, and genuine communities. Students don't learn content in isolation to possibly apply it someday-they engage with actual questions, address real challenges, and interact with people beyond their immediate learning community.</p>
         <p>This includes community engagement, service learning, apprenticeships and mentorships, authentic audiences, and real problems without answer keys.</p>
 
         <h3>Integration Across Disciplines</h3>
         <p>Knowledge and skills don't exist in separate subject silos in the real world, and they shouldn't in learning environments either. Lifespace Education intentionally integrates disciplines through project work, allowing students to see connections, apply knowledge purposefully, and develop holistic understanding.</p>
 
         <h3>Play and Exploration</h3>
-        <p>Play is not supplemental to learning—it is essential for development, wellbeing, and cognitive growth. Free play develops internal locus of control, emotional self-regulation, social skills, creativity and problem-solving, and intrinsic motivation.</p>
+        <p>Play is not supplemental to learning-it is essential for development, wellbeing, and cognitive growth. Free play develops internal locus of control, emotional self-regulation, social skills, creativity and problem-solving, and intrinsic motivation.</p>
         <p>Lifespace dedicates 1-2 hours daily to free play and exploration as non-negotiable, essential time protected in the daily structure.</p>
 
         <h3>Relationship-Based Learning</h3>
@@ -1328,7 +1328,7 @@ box-sizing: border-box;
       {/* ASSESSMENT */}
       <div className={`content-section ${activeSection === "assessment" ? "active" : ""}`}>
         <h2>Assessment</h2>
-        <p>Assessment in Lifespace Education serves fundamentally different purposes than in traditional schooling. Rather than sorting, ranking, or gatekeeping, assessment serves learning—helping students understand their own growth, identify next steps, and develop metacognitive awareness of their learning processes.</p>
+        <p>Assessment in Lifespace Education serves fundamentally different purposes than in traditional schooling. Rather than sorting, ranking, or gatekeeping, assessment serves learning-helping students understand their own growth, identify next steps, and develop metacognitive awareness of their learning processes.</p>
 
         <h3>Assessment FOR Learning, Not OF Learning</h3>
         <p><strong>Traditional assessment</strong> measures what students have learned at a fixed point, compares students to each other or to standardized benchmarks, assigns grades that label students, and creates high-stakes consequences.</p>
@@ -1368,7 +1368,7 @@ box-sizing: border-box;
       {/* DIFFERENTIATION */}
       <div className={`content-section ${activeSection === "differentiation" ? "active" : ""}`}>
         <h2>Differentiation</h2>
-        <p>Every student is unique—different strengths, challenges, interests, learning styles, developmental timelines, and needs. Lifespace Education is inherently differentiated because it responds to individual students rather than delivering standardized content to groups.</p>
+        <p>Every student is unique-different strengths, challenges, interests, learning styles, developmental timelines, and needs. Lifespace Education is inherently differentiated because it responds to individual students rather than delivering standardized content to groups.</p>
 
         <h3>Universal Design for Learning Framework</h3>
         <p>Lifespace Education aligns with the Universal Design for Learning (UDL) framework, which recognizes that learning environments should be designed from the outset to accommodate diverse learners rather than requiring "accommodations" as afterthoughts.</p>
@@ -1391,7 +1391,7 @@ box-sizing: border-box;
         <p>Students with autism, ADHD, sensory processing differences, or other neurodivergence benefit from structure matched to needs (some need highly consistent routines, some need frequent movement breaks), interest-based learning allowing deep dives into passionate interests, and explicit teaching of social skills.</p>
 
         <h4>Gifted and Advanced Learners:</h4>
-        <p>Students who learn quickly benefit from acceleration and depth—moving through skills quickly when mastered, going deeper into topics of interest rather than broader superficial coverage, and access to advanced materials when ready.</p>
+        <p>Students who learn quickly benefit from acceleration and depth-moving through skills quickly when mastered, going deeper into topics of interest rather than broader superficial coverage, and access to advanced materials when ready.</p>
 
         <h4>Students with Physical or Health Challenges:</h4>
         <p>Students managing chronic illness, physical disabilities, or medical needs benefit from flexible pacing, accessible learning with materials adapted for physical accessibility, and focus on what students CAN do.</p>
