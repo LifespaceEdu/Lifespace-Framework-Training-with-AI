@@ -33,7 +33,6 @@ const sendMessage = async () => {
 const message = inputValue.trim();
 if (!message || isLoading) return;
 
-```
 const userMessage = { role: 'user', content: message };
 setMessages(prev => [...prev, userMessage]);
 conversationHistory.current.push(userMessage);
@@ -72,7 +71,6 @@ try {
 } finally {
   setIsLoading(false);
 }
-```
 
 };
 
@@ -85,7 +83,6 @@ padding: 0;
 box-sizing: border-box;
 }
 
-```
     body {
       font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
       background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%);
@@ -965,7 +962,6 @@ box-sizing: border-box;
     </div>
   </div>
 </>
-```
 
 );
 }
