@@ -47,7 +47,7 @@
               Differentiation in Lifespace includes sensory needs, language
               differences, neurodivergence, and diverse learning profiles. The
               goal is access to meaningful, challenging work for every student,
-              not one-size-fits-all pacing or materials.
+              not uniform pacing or materials.
             </p>
           </div>
         </main>
