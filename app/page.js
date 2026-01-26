@@ -848,7 +848,7 @@ box-sizing: border-box;
             <p>Vacation Theme: Beach, volcano, botanical garden, playground - perfect for younger children who love adventure.</p>
           </div>
           <div className="learning-map-image">
-            <img src="/sample_map_futuristic_1.png.png" alt="Futuristic themed learning map" />
+            <img src="/sample_map_futuristic_1.png" alt="Futuristic themed learning map" />
             <p>Futuristic Theme: Sci-fi navigation interface - appeals to children who love technology and space.</p>
           </div>
           <div className="learning-map-image">
@@ -856,7 +856,7 @@ box-sizing: border-box;
             <p>Race Track Theme: Hot Wheels-inspired track with exciting stops - great for high-energy learners.</p>
           </div>
           <div className="learning-map-image">
-            <img src="/sample_map_barbie_1.png.png" alt="Fantasy themed learning map" />
+            <img src="/sample_map_barbie_1.png" alt="Fantasy themed learning map" />
             <p>Fantasy Theme: Colorful, whimsical design - perfect for creative, imaginative learners.</p>
           </div>
           <div className="learning-map-image">
