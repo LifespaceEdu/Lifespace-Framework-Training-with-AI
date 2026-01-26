@@ -43,17 +43,11 @@ export default function Home() {
     try {
       const response = await fetch("/api/chat", {
         method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-        },
-        body: JSON.stringify({
-          messages: conversationHistory.current,
-        }),
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ messages: conversationHistory.current }),
       });
 
-      if (!response.ok) {
-        throw new Error("API request failed");
-      }
+      if (!response.ok) throw new Error("API request failed");
 
       const data = await response.json();
       const assistantMessage = {
@@ -100,7 +94,6 @@ export default function Home() {
           overflow: hidden;
         }
 
-        /* Sidebar Navigation */
         .sidebar {
           width: 280px;
           background: rgba(26, 26, 46, 0.95);
@@ -157,7 +150,6 @@ export default function Home() {
           transform: translateX(4px);
         }
 
-        /* Main Content */
         .main-content {
           flex: 1;
           overflow-y: auto;
@@ -242,7 +234,6 @@ export default function Home() {
           box-shadow: 0 4px 12px rgba(102, 126, 234, 0.3);
         }
 
-        /* AI Chat Interface */
         .chat-fab {
           position: fixed;
           bottom: 30px;
@@ -379,7 +370,6 @@ export default function Home() {
           cursor: not-allowed;
         }
 
-        /* Mobile Menu */
         .mobile-menu-btn {
           display: none;
           position: fixed;
@@ -599,7 +589,6 @@ export default function Home() {
         </nav>
 
         <main className="main-content">
-          {/* Welcome Section */}
           <div
             className={`content-section ${
               activeSection === "welcome" ? "active" : ""
@@ -1297,64 +1286,35 @@ export default function Home() {
               activeSection === "troubleshooting" ? "active" : ""
             }`}
           >
-            <h2>Troubleshooting Common Challenges</h2>
+            <h2>Troubleshooting & Common Challenges</h2>
 
-            <h3>"My child isn't motivated to do anything!"</h3>
-            <p>
-              <strong>Cause:</strong> Often coming from a system that killed
-              intrinsic motivation through external rewards/punishments.
-            </p>
-            <p>
-              <strong>Solution:</strong> Give time. Protect free play. Follow
-              genuine interests, even if they seem "unproductive." Connection
-              before correction.
-            </p>
+            <h3>My child resists core skills (reading/writing/math)</h3>
+            <ul>
+              <li>Shorten lessons (10-15 minutes) and increase frequency.</li>
+              <li>Connect every skill to a real project or interest.</li>
+              <li>Offer choices in how to practice (tools, topics, formats).</li>
+            </ul>
 
-            <h3>"We are not getting through all the work!"</h3>
-            <p>
-              <strong>Cause:</strong> Expectations too high, tasks taking longer
-              than anticipated.
-            </p>
-            <p>
-              <strong>Solution:</strong> Cut the list. Quality over quantity.
-              Remember: the goal is developing skills and agency, not checking
-              boxes.
-            </p>
+            <h3>My child only wants screens</h3>
+            <ul>
+              <li>Use clear time limits and predictable routines.</li>
+              <li>Always pair screen time with brain breaks and offline play.</li>
+              <li>Make non-screen options genuinely interesting and available.</li>
+            </ul>
 
-            <h3>"I do not know how to teach [subject]!"</h3>
-            <p>
-              <strong>Cause:</strong> Expecting yourself to be an expert teacher
-              in all areas.
-            </p>
-            <p>
-              <strong>Solution:</strong> You are a facilitator, not a walking
-              encyclopedia. Use curricula, online resources, community experts,
-              library. Model learning alongside your child.
-            </p>
+            <h3>I feel overwhelmed trying to “do it all”</h3>
+            <ul>
+              <li>Start with just core skills + free play.</li>
+              <li>Add one small project at a time.</li>
+              <li>Expect iteration; you are allowed to simplify.</li>
+            </ul>
 
-            <h3>"My child only wants screen time during free play!"</h3>
-            <p>
-              <strong>Cause:</strong> Screens are highly engaging; other options
-              may not be readily available.
-            </p>
-            <p>
-              <strong>Solution:</strong> Enforce limits (1 hour non-educational
-              screens). Make other options more accessible (art supplies out,
-              friends available, nature nearby). Brain breaks after every screen
-              session.
-            </p>
-
-            <h3>"I feel like I am doing it wrong!"</h3>
-            <p>
-              <strong>Cause:</strong> Comparing to an idealized version or
-              traditional school model.
-            </p>
-            <p>
-              <strong>Solution:</strong> There is no "right" way. If your child
-              is engaged, learning, and maintaining positive relationships, you
-              are doing it right. Adjust based on your child's needs, not a
-              checklist.
-            </p>
+            <h3>Behavior challenges during learning time</h3>
+            <ul>
+              <li>De-escalate first; learning can wait until everyone is calm.</li>
+              <li>Use collaborative problem solving instead of punishments.</li>
+              <li>Look for unmet needs: sleep, hunger, sensory overload, connection.</li>
+            </ul>
           </div>
 
           <div
@@ -1362,79 +1322,37 @@ export default function Home() {
               activeSection === "six-pillars" ? "active" : ""
             }`}
           >
-            <h2>The Six Pillars (What Students Develop)</h2>
-
-            <h3>1. Critical Thinking</h3>
+            <h2>The Six Pillars</h2>
             <p>
-              Analysis, synthesis, inference, evaluation. Information
-              literacy—evaluating source credibility, identifying bias,
-              distinguishing fact from opinion, navigating digital information
-              safely.
+              Lifespace Education develops six interconnected pillars that
+              together support thriving in uncertain futures.
             </p>
-            <p>
-              <strong>Develops through:</strong> Academic discussions,
-              project-based investigations, real-world contexts, explicit
-              instruction in thinking strategies.
-            </p>
-
-            <h3>2. Problem Solving</h3>
-            <p>
-              Identifying challenges, generating solutions, implementing
-              strategies, iterating based on results. Moving from understanding
-              to doing.
-            </p>
-            <p>
-              <strong>Develops through:</strong> Project-based learning, design
-              challenges, investigations/experiments, real-world application.
-            </p>
-
-            <h3>3. Core Competencies</h3>
-            <p>
-              Reading, writing, math, science, social studies. Strong
-              foundations in essential skills.
-            </p>
-            <p>
-              <strong>Develops through:</strong> ~2 hours daily focused
-              instruction + immediate application in authentic contexts.
-            </p>
-
-            <h3>4. Expression</h3>
-            <p>
-              Taking ideas from mind and making them perceivable to others.
-              Synthesis + transmission. Measured by clarity and effectiveness,
-              not technical perfection.
-            </p>
-            <p>
-              <strong>Any modality works:</strong> Written, spoken, visual,
-              performed, built, coded.
-            </p>
-
-            <h3>5. Social-Emotional Learning (SEL)</h3>
-            <p>
-              Foundation for all other learning. Five competencies:
-              self-awareness, self-management, social awareness, relationship
-              skills, responsible decision-making.
-            </p>
-            <p>
-              <strong>Develops through:</strong> Explicit lessons,
-              relationship-based culture, restorative practices, growth mindset,
-              mindfulness, collaborative work.
-            </p>
-
-            <h3>6. Project Work</h3>
-            <p>
-              Both a competency students develop and the vehicle through which
-              all other learning happens.
-            </p>
-            <p>
-              <strong>As competency:</strong> Planning, sustained inquiry,
-              integrating disciplines, managing setbacks, collaborating,
-              documenting/reflecting, completion.
-            </p>
-            <p>
-              <strong>As vehicle:</strong> Authentic context where all other
-              pillars integrate meaningfully.
-            </p>
+            <ul>
+              <li>
+                <strong>Critical Thinking:</strong> Making sense of complex
+                information.
+              </li>
+              <li>
+                <strong>Problem Solving:</strong> Tackling real challenges with
+                flexible strategies.
+              </li>
+              <li>
+                <strong>Core Competencies:</strong> Reading, writing, math,
+                science, social studies.
+              </li>
+              <li>
+                <strong>Expression:</strong> Communicating ideas through many
+                modes.
+              </li>
+              <li>
+                <strong>Social-Emotional Learning:</strong> Understanding self
+                and others, navigating relationships.
+              </li>
+              <li>
+                <strong>Project Work:</strong> Sustained, meaningful work that
+                integrates all the above.
+              </li>
+            </ul>
           </div>
 
           <div
@@ -1442,61 +1360,33 @@ export default function Home() {
               activeSection === "principles" ? "active" : ""
             }`}
           >
-            <h2>Five Core Principles (How Learning Happens)</h2>
-
-            <h3>1. Student Agency</h3>
+            <h2>Five Principles</h2>
             <p>
-              Students make meaningful decisions about learning within
-              supportive structure. Learning Maps operationalize this—students
-              choose sequence of daily activities within adult-identified core
-              responsibilities.
+              Five guiding principles shape how Lifespace is implemented in
+              daily practice.
             </p>
-            <p>
-              <strong>Flexibility spectrum:</strong> Full agency → guided choice
-              → reduced choice (based on student needs).
-            </p>
-
-            <h3>2. Real-World Relevance</h3>
-            <p>
-              Learning connects to authentic contexts, problems, and audiences.
-            </p>
-            <p>
-              <strong>Examples:</strong> Community engagement (visiting local
-              resources, connecting with community members), service learning,
-              apprenticeships/mentorships, real problems without answer keys.
-            </p>
-
-            <h3>3. Integration Across Disciplines</h3>
-            <p>
-              Knowledge does not exist in subject silos. Projects naturally
-              integrate reading, writing, math, science, social studies.
-            </p>
-            <p>
-              <strong>Balance:</strong> Daily focused time on core skills +
-              authentic application in projects.
-            </p>
-
-            <h3>4. Play & Exploration</h3>
-            <p>
-              Play is essential, not supplemental. 1-2+ hours daily of free play
-              is non-negotiable.
-            </p>
-            <p>
-              <strong>Develops:</strong> Internal locus of control, emotional
-              regulation, social skills, creativity, problem-solving, intrinsic
-              motivation.
-            </p>
-
-            <h3>5. Relationship-Based Learning</h3>
-            <p>
-              Positive relationships are the foundation for all learning. Moving
-              beyond rewards/punishments to relationships built on mutual
-              respect, trust, authentic care.
-            </p>
-            <p>
-              <strong>When conflicts arise:</strong> Restorative practices
-              (repair relationships) rather than punishment.
-            </p>
+            <ul>
+              <li>
+                <strong>Agency within Structure:</strong> Clear boundaries and
+                expectations with genuine choice inside them.
+              </li>
+              <li>
+                <strong>Real-World Relevance:</strong> Learning tied to actual
+                problems, audiences, and contexts.
+              </li>
+              <li>
+                <strong>Integration over Silos:</strong> Skills are applied
+                across domains, not taught in isolation.
+              </li>
+              <li>
+                <strong>Relational Safety:</strong> Learning depends on trust
+                and connection.
+              </li>
+              <li>
+                <strong>Adaptive Design:</strong> Systems are iterated based on
+                what is actually happening, not rigid plans.
+              </li>
+            </ul>
           </div>
 
           <div
@@ -1505,53 +1395,20 @@ export default function Home() {
             }`}
           >
             <h2>Assessment Approach</h2>
-
-            <h3>Assessment FOR Learning, Not OF Learning</h3>
             <p>
-              Assessment informs instruction and supports growth—it does not
-              judge or rank students.
+              Assessment in Lifespace is primarily formative—used to guide next
+              steps rather than label or rank students.
             </p>
-
-            <h3>Methods</h3>
             <ul>
-              <li>
-                <strong>Academic discussions:</strong> Conversations reveal
-                thinking
-              </li>
-              <li>
-                <strong>Project presentations:</strong> Students explain their
-                work
-              </li>
-              <li>
-                <strong>Portfolios:</strong> Collections showing growth over
-                time
-              </li>
-              <li>
-                <strong>Observation/documentation:</strong> Notes on student
-                engagement, strategies, challenges
-              </li>
-              <li>
-                <strong>Student self-assessment:</strong> Reflection on own
-                learning
-              </li>
+              <li>Portfolios of work over time.</li>
+              <li>Conferences and discussions about thinking and process.</li>
+              <li>Self- and peer-assessment tied to clear criteria.</li>
+              <li>Observation notes focused on growth, not deficits.</li>
             </ul>
-
-            <h3>Comparing to Self, Not Others</h3>
             <p>
-              Students are measured against their own previous performance, not
-              against other students or grade-level standards.
-            </p>
-
-            <h3>Low Stakes—Feedback Not Judgment</h3>
-            <p>
-              The goal is helping students improve, not proving what they do not
-              know.
-            </p>
-
-            <h3>Standardized Tests?</h3>
-            <p>
-              Optional. Can be useful as one data point but do not define
-              student worth or capability.
+              When external requirements (grades, transcripts, test scores) are
+              necessary, they are translated from the rich evidence already
+              gathered, not used as the primary driver of learning.
             </p>
           </div>
 
@@ -1562,65 +1419,55 @@ export default function Home() {
           >
             <h2>Differentiation: Supporting All Learners</h2>
 
-            <h3>Universal Design for Learning (UDL)</h3>
-            <p>Framework for creating flexible learning environments:</p>
+            <h3>Core Idea</h3>
+            <p>
+              Differentiation in Lifespace means adjusting the level of
+              structure, support, and challenge so each student can participate
+              meaningfully in the same overall framework.
+            </p>
+
+            <h3>Levers You Can Adjust</h3>
             <ul>
               <li>
-                <strong>Multiple means of engagement:</strong> Different ways to
-                spark interest and motivation
+                <strong>Time:</strong> More or less time for tasks, extra
+                breaks, extended deadlines.
               </li>
               <li>
-                <strong>Multiple means of representation:</strong> Presenting
-                information in varied formats (text, visuals, audio, hands-on)
+                <strong>Support:</strong> Scribing, read-alouds, visuals,
+                sentence stems, worked examples.
               </li>
               <li>
-                <strong>Multiple means of action & expression:</strong> Allowing
-                students to show what they know in different ways
+                <strong>Complexity:</strong> Same task with simpler or more
+                complex inputs, fewer or more steps.
+              </li>
+              <li>
+                <strong>Output:</strong> Different ways to show learning
+                (drawings, audio, video, oral explanation, diagrams, models).
+              </li>
+              <li>
+                <strong>Environment:</strong> Quiet space, movement options,
+                sensory tools, predictable routines.
               </li>
             </ul>
 
-            <h3>Adjusting Support Levels</h3>
+            <h3>High-Need Learners</h3>
             <p>
-              Lifespace allows dynamic shifting along a support spectrum based
-              on student needs and context.
+              For students with executive function, autism, ADHD, trauma
+              histories, or other complex needs, increase adult scaffolding
+              while preserving agency wherever possible.
             </p>
             <ul>
-              <li>
-                <strong>High support:</strong> More structure, modeling, and
-                scaffolds for students who need it
-              </li>
-              <li>
-                <strong>Moderate support:</strong> Guided choice, shared
-                planning, check-ins
-              </li>
-              <li>
-                <strong>Low support:</strong> High autonomy, student-led
-                planning, minimal scaffolds
-              </li>
+              <li>Use shorter blocks with clear visual timers.</li>
+              <li>Offer two good choices instead of open-ended decisions.</li>
+              <li>Pre-teach routines and rehearse them when everyone is calm.</li>
             </ul>
-
-            <h3>Individual Needs</h3>
-            <p>
-              Differentiation in Lifespace includes sensory needs, language
-              differences, neurodivergence, and diverse learning profiles. The
-              goal is access to meaningful, challenging work for every student,
-              not one-size-fits-all pacing or materials.
-            </p>
           </div>
         </main>
 
-        {/* Chat UI */}
         <div
-          className="chat-fab"
-          onClick={() => setChatOpen(true)}
-          aria-label="Open Lifespace AI assistant"
+          className={`chat-window ${chatOpen ? "open" : ""}`}
+          aria-label="Lifespace AI Assistant"
         >
-          <svg viewBox="0 0 24 24">
-            <path d="M12 3C7.03 3 3 6.58 3 11c0 2.04.86 3.9 2.32 5.33L4 21l4.11-1.87C9 19.7 10.46 20 12 20c4.97 0 9-3.58 9-8s-4.03-9-9-9zm-1 10H8v-2h3V8l4 3-4 3z" />
-          </svg>
-        </div>
-
-        <div className={`chat-window ${chatOpen ? "open" : ""}`}>
           <div className="chat-header">
             <h3>Lifespace AI Assistant</h3>
             <button
@@ -1631,6 +1478,7 @@ export default function Home() {
               ×
             </button>
           </div>
+
           <div className="chat-messages" ref={chatMessagesRef}>
             {messages.map((msg, index) => (
               <div
@@ -1640,23 +1488,36 @@ export default function Home() {
                 {msg.content}
               </div>
             ))}
+            {isLoading && (
+              <div className="message assistant">Thinking...</div>
+            )}
           </div>
+
           <div className="chat-input">
             <input
               type="text"
+              placeholder="Ask about implementation, daily structure, specific challenges..."
               value={inputValue}
-              placeholder="Ask a question about Lifespace..."
               onChange={(e) => setInputValue(e.target.value)}
               onKeyDown={(e) => {
                 if (e.key === "Enter") sendMessage();
               }}
-              disabled={isLoading}
             />
-            <button onClick={sendMessage} disabled={isLoading}>
-              {isLoading ? "Thinking..." : "Send"}
+            <button onClick={sendMessage} disabled={isLoading || !inputValue.trim()}>
+              Send
             </button>
           </div>
         </div>
+
+        <button
+          className="chat-fab"
+          onClick={() => setChatOpen(true)}
+          aria-label="Open Lifespace AI Assistant"
+        >
+          <svg viewBox="0 0 24 24">
+            <path d="M12 3C7.03 3 3 6.58 3 11c0 1.94.74 3.73 2 5.19V21l3.07-1.6C9.06 19.79 10.48 20 12 20c4.97 0 9-3.58 9-8s-4.03-9-9-9zm1 11h-2v-2h2v2zm0-4h-2V7h2v3z" />
+          </svg>
+        </button>
       </div>
     </>
   );
