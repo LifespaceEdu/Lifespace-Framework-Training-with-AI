@@ -499,14 +499,19 @@ box-sizing: border-box;
     }
 
     @media (max-width: 768px) {
-      .sidebar {
-        position: fixed;
-        top: 0;
-        left: 0;
-        height: 100vh;
-        z-index: 1000;
-        transform: translateX(-100%);
-      }
+  .sidebar {
+    position: fixed;
+    top: 0;
+    left: -280px;
+    height: 100vh;
+    z-index: 1000;
+    width: 280px;
+    transition: left 0.3s ease;
+  }
+
+  .sidebar.open {
+    left: 0;
+  }
 
       .sidebar.open {
         transform: translateX(0);
