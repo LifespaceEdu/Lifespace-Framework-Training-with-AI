@@ -499,15 +499,20 @@ box-sizing: border-box;
     }
 
 @media (max-width: 768px) {
+  .container {
+    display: block !important;
+  }
   .sidebar {
     display: none !important;
   }
   .main-content {
+    width: 100% !important;
+    height: 100vh !important;
     padding: 20px !important;
-    margin-left: 0 !important;
+    margin: 0 !important;
+    overflow: auto !important;
   }
 }
-
 
   .sidebar.open {
     left: 0;
