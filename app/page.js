@@ -309,7 +309,7 @@ box-sizing: border-box;
   border: none;
   border-radius: 0;
   cursor: pointer;
-
+  }
     .nav-button:hover {
       background: #00a896;
     }
