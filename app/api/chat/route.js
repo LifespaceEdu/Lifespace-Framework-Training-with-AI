@@ -22,7 +22,7 @@ export async function POST(req) {
     const messagesWithSystem = [systemPrompt, ...messages];
     
     console.log("Calling GitHub Models API...");
-    const response = await fetch("https://models.github.ai/chat/completions", {
+    const response = await fetch("https://models.github.ai/inference/chat/completions", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
