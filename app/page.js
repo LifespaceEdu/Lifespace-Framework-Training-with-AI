@@ -158,16 +158,6 @@ box-sizing: border-box;
   transition: transform 0.3s ease;
 }
 
-@media (max-width: 768px) {
-  .sidebar {
-    transform: translateX(-100%);
-  }
-  .sidebar.open {
-    transform: translateX(0);
-  }
-}
-
-
     .sidebar h1 {
       font-size: 1.5rem;
       margin-bottom: 10px;
