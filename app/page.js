@@ -271,7 +271,7 @@ box-sizing: border-box;
 
     .quick-start {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      grid-template-columns: 1fr;
       gap: 15px;
       margin: 30px 0;
     }
