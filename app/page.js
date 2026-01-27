@@ -498,7 +498,17 @@ box-sizing: border-box;
       fill: white;
     }
 
-@media (max-width: 768px) {.sidebar{display:none!important}}
+@media (max-width: 768px) {
+  .sidebar {
+    position: fixed;
+    top: 0;
+    left: -280px;
+    height: 100vh;
+    z-index: 1000;
+    width: 280px;
+    transition: left 0.3s ease;
+  }
+
 
   .sidebar.open {
     left: 0;
