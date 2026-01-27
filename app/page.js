@@ -285,7 +285,7 @@ box-sizing: border-box;
       cursor: pointer;
       transition: all 0.3s;
       font-size: 0.95rem;
-      text-align: left;
+      text-align: center;
     }
 
     .quick-start-btn:hover {
@@ -325,7 +325,7 @@ box-sizing: border-box;
 
     .learning-map-images {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      grid-template-columns: 1fr;
       gap: 20px;
       margin: 30px 0;
     }
@@ -696,7 +696,7 @@ box-sizing: border-box;
         <div className="section-navigation">
           <button className="nav-button" disabled>← Previous</button>
           <button className="nav-button" onClick={() => navigateToSection(getNextSection("welcome"))}>
-            Next: {sectionTitles[getNextSection("welcome")]} →
+           {sectionTitles[getNextSection("welcome")]} 
           </button>
         </div>
       </div>
@@ -712,7 +712,7 @@ box-sizing: border-box;
 
         <div className="section-navigation">
           <button className="nav-button" onClick={() => navigateToSection(getPrevSection("what-is-lifespace"))}>
-            ← Previous: {sectionTitles[getPrevSection("what-is-lifespace")]}
+            {sectionTitles[getPrevSection("what-is-lifespace")]}
           </button>
           <button className="nav-button" onClick={() => navigateToSection(getNextSection("what-is-lifespace"))}>
             Next: {sectionTitles[getNextSection("what-is-lifespace")]} →
