@@ -302,16 +302,13 @@ box-sizing: border-box;
       border-top: 1px solid #2D5F5D;
     }
 
-    .nav-button {
-      padding: 12px 24px;
-      background: #2D5F5D;
-      color: white;
-      border: none;
-      border-radius: 6px;
-      cursor: pointer;
-      font-size: 0.95rem;
-      transition: background 0.2s;
-    }
+   .nav-button {
+  padding: 12px 0;
+  background: transparent;
+  color: #00a896;
+  border: none;
+  border-radius: 0;
+  cursor: pointer;
 
     .nav-button:hover {
       background: #00a896;
