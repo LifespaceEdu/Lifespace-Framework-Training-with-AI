@@ -498,6 +498,12 @@ box-sizing: border-box;
       fill: white;
     }
 
+@media (max-width: 768px) {
+  .sidebar {
+    display: none !important;
+  }
+}
+
   .sidebar.open {
     left: 0;
   }
