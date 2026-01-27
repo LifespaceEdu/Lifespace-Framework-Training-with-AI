@@ -149,14 +149,20 @@ box-sizing: border-box;
       overflow: hidden;
     }
 
-    .sidebar {
-      width: 280px;
-      background: #1a1a1a;
-      border-right: 1px solid #2D5F5D;
-      padding: 20px;
-      overflow-y: auto;
-      transition: transform 0.3s ease;
-    }
+    @media (max-width: 768px) {
+  .sidebar {
+    position: fixed !important;  /* ← !important overrides desktop */
+    top: 0;
+    left: -280px;
+    height: 100vh;
+    z-index: 1000;
+    width: 280px;
+    transition: left 0.3s ease;
+  }
+
+  .sidebar.open {
+    left: 0 !important;
+  }
 
     .sidebar h1 {
       font-size: 1.5rem;
