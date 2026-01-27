@@ -334,3 +334,10 @@ body {
     padding: 0 16px;
   }
 }
+
+[class*="chat"],
+#chat-widget,
+iframe[src*="chat"] {
+  pointer-events: auto !important;
+  z-index: 2147483647 !important;
+}
