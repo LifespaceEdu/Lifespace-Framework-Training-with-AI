@@ -51,10 +51,10 @@ try {
   if (!response.ok) throw new Error("API request failed");
 
   const data = await response.json();
-  const assistantMessage = {
-    role: "assistant",
-    content: data.choices[0].message.content
-  };
+const assistantMessage = {
+  role: "assistant", 
+  content: data.reply || data.choices?.[0]?.message?.content || "No response"
+};
 
   setMessages((prev) => [...prev, assistantMessage]);
   conversationHistory.current.push(assistantMessage);
