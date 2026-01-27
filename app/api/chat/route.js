@@ -20,7 +20,7 @@ export async function POST(req) {
     
     const messagesWithSystem = [systemPrompt, ...messages];
     
-    const response = await fetch("https://models.inference.ai.azure.com/chat/completions", {
+    const response = await fetch("https://models.github.ai/chat/completions", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
