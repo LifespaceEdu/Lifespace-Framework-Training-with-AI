@@ -502,7 +502,12 @@ box-sizing: border-box;
   .sidebar {
     display: none !important;
   }
+  .main-content {
+    padding: 20px !important;
+    margin-left: 0 !important;
+  }
 }
+
 
   .sidebar.open {
     left: 0;
