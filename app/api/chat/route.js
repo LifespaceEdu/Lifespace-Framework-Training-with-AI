@@ -10,6 +10,7 @@ export async function POST(req) {
 
     const token = process.env.GITHUB_TOKEN;
     if (!token) {
+      console.error("GITHUB_TOKEN environment variable is not set");
       return NextResponse.json({ error: "GITHUB_TOKEN not set" }, { status: 500 });
     }
 
@@ -20,6 +21,7 @@ export async function POST(req) {
     
     const messagesWithSystem = [systemPrompt, ...messages];
     
+    console.log("Calling GitHub Models API...");
     const response = await fetch("https://models.github.ai/chat/completions", {
       method: "POST",
       headers: {
@@ -36,13 +38,24 @@ export async function POST(req) {
     
     if (!response.ok) {
       const errorText = await response.text();
-      return NextResponse.json({ error: "API error", details: errorText }, { status: response.status });
+      console.error("GitHub Models API Error:", response.status, errorText);
+      return NextResponse.json({ 
+        error: "API error", 
+        details: errorText,
+        status: response.status 
+      }, { status: response.status });
     }
     
     const data = await response.json();
+    console.log("GitHub Models API success");
     return NextResponse.json(data);
     
   } catch (error) {
-    return NextResponse.json({ error: "Failed to call AI", message: error.message }, { status: 500 });
+    console.error("API Error Details:", error.message, error.stack);
+    return NextResponse.json({ 
+      error: "Failed to call AI", 
+      message: error.message,
+      stack: error.stack 
+    }, { status: 500 });
   }
 }
