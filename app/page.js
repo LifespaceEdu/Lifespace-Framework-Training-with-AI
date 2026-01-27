@@ -150,13 +150,23 @@ box-sizing: border-box;
     }
 
     .sidebar {
-      width: 280px;
-      background: #1a1a1a;
-      border-right: 1px solid #2D5F5D;
-      padding: 20px;
-      overflow-y: auto;
-      transition: transform 0.3s ease;
-    }
+  width: 280px;
+  background: #1a1a1a;
+  border-right: 1px solid #2D5F5D;
+  padding: 20px;
+  overflow-y: auto;
+  transition: transform 0.3s ease;
+}
+
+@media (max-width: 768px) {
+  .sidebar {
+    transform: translateX(-100%);
+  }
+  .sidebar.open {
+    transform: translateX(0);
+  }
+}
+
 
     .sidebar h1 {
       font-size: 1.5rem;
