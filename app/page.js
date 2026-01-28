@@ -50,10 +50,6 @@ try {
 
   if (!response.ok) throw new Error("API request failed");
 
-        role: "assistant",
-        content: "Sorry, I encountered an error. Please try again."
-      }
-    ]);
   } finally {
     setIsLoading(false);
   }
