@@ -31,7 +31,7 @@ export async function POST(req) {
         "Authorization": "Bearer " + token
       },
       body: JSON.stringify({
-        model: "ai21-jamba-1.5-large",
+        model: "gpt-4o",
         messages: messagesWithSystem,
         temperature: 0.7,
         max_tokens: 2000
