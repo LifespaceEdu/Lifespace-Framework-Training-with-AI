@@ -58,7 +58,9 @@ const data = await response.json();
     setMessages((prev) => [...prev, assistantMessage]);
     conversationHistory.current.push(assistantMessage);
   } catch (error) {
-    console.error("Error:", error);
+  console.error("Error:", error);
+  console.error("Error message:", error.message);
+  console.error("Error stack:", error.stack);
     setMessages((prev) => [
       ...prev,
       {
