@@ -30,7 +30,7 @@ export async function POST(req) {
         "Authorization": "Bearer " + token
       },
       body: JSON.stringify({
-        model: "claude-3-5-sonnet-20241022",
+        model: "gpt-40",
         messages: messagesWithSystem,
         temperature: 0.7,
         max_tokens: 2000
