@@ -53,10 +53,7 @@ try {
   const data = await response.json();
 const assistantMessage = {
   role: "assistant", 
-  content: data.reply || data.choices?.[0]?.message?.content || "No response"
-};
-
-  const sendMessage = async () => {
+  content: data.reply || data.choices?.[0]?.message?.content || "No const sendMessage = async () => {
   const message = inputValue.trim();
   if (!message || isLoading) return;
 
