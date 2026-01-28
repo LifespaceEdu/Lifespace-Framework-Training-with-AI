@@ -49,7 +49,23 @@ try {
   });
 
   if (!response.ok) throw new Error("API request failed");
+const data = await response.json();
+    const assistantMessage = {
+      role: "assistant",
+      content: data.choices?.[0]?.message?.content || "No response"
+    };
 
+    setMessages((prev) => [...prev, assistantMessage]);
+    conversationHistory.current.push(assistantMessage);
+  } catch (error) {
+    console.error("Error:", error);
+    setMessages((prev) => [
+      ...prev,
+      {
+        role: "assistant",
+        content: "Sorry, I encountered an error. Please try again."
+      }
+    ]);
   } finally {
     setIsLoading(false);
   }
