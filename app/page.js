@@ -485,7 +485,7 @@ box-sizing: border-box;
       position: fixed;
       top: 20px;
       left: 20px;
-      z-index: 1001;
+      z-index: 1003;
       background: #00a896;
       border: none;
       padding: 10px;
