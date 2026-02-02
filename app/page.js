@@ -501,21 +501,21 @@ box-sizing: border-box;
 
 @media (max-width: 768px) {
   .sidebar {
-    display: none !important;
+    position: fixed;
+    left: 0;
+    top: 0;
+    height: 100vh;
+    z-index: 1002;
+    transform: translateX(-100%);
   }
-}
 
   .sidebar.open {
-    left: 0;
+    transform: translateX(0);
   }
 
-      .sidebar.open {
-        transform: translateX(0);
-      }
-
-      .mobile-menu-btn {
-        display: block;
-      }
+  .mobile-menu-btn {
+    display: block;
+  }
 
       .main-content {
         padding: 80px 20px 20px;
